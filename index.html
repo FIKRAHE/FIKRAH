@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIKRAH LANDSCAPING | ديكور الأسطح والحدائق الفاخرة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { DEFAULT: '#D4AF37', dark: '#AA8C2C', light: '#F3E5AB', accent: '#E6C554' },
+                        luxblack: '#070707',
+                        luxsurface: '#121212',
+                        luxcard: '#161616',
+                        luxgreen: '#047857'
+                    },
+                    boxShadow: {
+                        'glow': '0 0 30px -5px rgba(212, 175, 55, 0.3)',
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #070707; color: #F3F4F6; overflow-x: hidden; }
+        .glass-nav { background: rgba(7, 7, 7, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .glass-card { background: rgba(22, 22, 22, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(212, 175, 55, 0.15); }
+        .glass-card:hover { border-color: rgba(212, 175, 55, 0.4); box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.25); }
+        .hero-banner {
+            background: linear-gradient(to bottom, rgba(7,7,7,0.4), rgba(7,7,7,0.92)), 
+                        url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+        }
+        .gold-text { background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #070707; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-luxblack text-gray-100 min-h-screen selection:bg-gold selection:text-black">
+
+    <div id="clientView">
+        <header class="sticky top-0 z-50 glass-nav border-b border-gold/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold tracking-wide">
+                    <a href="#home" class="text-gold border-b-2 border-gold pb-1 transition">الرئيسية</a>
+                    <a href="#categories" class="hover:text-gold transition">التصنيفات</a>
+                    <a href="#products" class="hover:text-gold transition">المنتجات</a>
+                    <a href="#services" class="hover:text-gold transition">خدماتنا</a>
+                    <a href="#projects" class="hover:text-gold transition">المشاريع</a>
+                    <a href="#about" class="hover:text-gold transition">من نحن</a>
+                    <a href="#contact" class="hover:text-gold transition">تواصل معنا</a>
+                </nav>
+
+                <a href="#home" class="flex items-center gap-3.5 group">
+                    <div class="flex flex-col items-end">
+                        <span class="text-2xl font-black tracking-widest text-white group-hover:text-gold transition">FIKRAH</span>
+                        <span class="text-[9px] uppercase tracking-[0.3em] text-gold font-semibold">LANDSCAPING</span>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold via-gold-dark to-black p-0.5 shadow-glow flex items-center justify-center">
+                        <div class="w-full h-full bg-luxblack rounded-[10px] flex items-center justify-center">
+                            <span class="text-gold font-black text-xl">F</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4">
+                    <button onclick="openCartModal()" class="relative p-2.5 rounded-full glass-card hover:border-gold transition flex items-center justify-center">
+                        <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span id="cartBadgeCount" class="absolute -top-1 -right-1 bg-gold text-black text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section id="home" class="relative min-h-[85vh] flex items-center justify-center hero-banner py-24 px-4 text-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-luxblack via-transparent to-luxblack/50"></div>
+            <div class="max-w-4xl mx-auto relative z-10 space-y-6">
+                <span class="inline-block px-5 py-2 rounded-full glass-card border border-gold/40 text-gold text-xs font-bold tracking-widest uppercase">
+                    ✦ جمال يبدأ من التفصيل
+                </span>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight text-white">
+                    حوّل مساحتك إلى <span class="gold-text">تحفة فنية</span>
+                </h1>
+                <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-300 font-light">
+                    أحدث ديكورات الحدائق والأسطح والمنازل بتصاميم عصرية وخامات عالية الجودة تناسب ذوقك وميزانيتك.
+                </p>
+                
+                <div class="max-w-xl mx-auto pt-2">
+                    <div class="relative">
+                        <input type="text" id="searchInput" oninput="handleSearchInput(this.value)" placeholder="ابحث عن منتج، جلسة، عشب صناعي..." class="w-full bg-black/80 border border-gold/30 rounded-2xl py-4 px-6 text-white placeholder-gray-500 focus:border-gold outline-none shadow-glow text-sm">
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gold">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+                    <a href="#products" class="w-full sm:w-auto bg-gradient-to-r from-gold via-gold-accent to-gold-dark text-black font-extrabold px-9 py-4 rounded-xl shadow-glow hover:scale-105 transition">
+                        استكشف المتجر
+                    </a>
+                    <button onclick="openCustomDesignModal()" class="w-full sm:w-auto glass-card text-gold font-bold px-9 py-4 rounded-xl hover:bg-gold/10 transition border border-gold/30">
+                        اطلب تصميم خاص
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 -mt-12 relative z-20 mb-20">
+            <div class="glass-card rounded-2xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center border border-gold/20 shadow-2xl">
+                <div class="flex flex-col items-center justify-center space-y-3">
+                    <div class="w-12 h-12 rounded-xl overflow-hidden border border-gold/40 shadow-glow bg-black/50 p-1">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div>
+                        <div class="text-gold text-sm font-bold">شحن سريع</div>
+                        <p class="text-[11px] text-gray-400">إلى جميع مناطق المملكة</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center space-y-3 border-r border-gray-800">
+                    <div class="w-12 h-12 rounded-xl overflow-hidden border border-gold/40 shadow-glow bg-black/50 p-1">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div>
+                        <div class="text-gold text-sm font-bold">جودة مضمونة</div>
+                        <p class="text-[11px] text-gray-400">خامات عالمية فاخرة</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center space-y-3 border-r border-gray-800">
+                    <div class="w-12 h-12 rounded-xl overflow-hidden border border-gold/40 shadow-glow bg-black/50 p-1">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div>
+                        <div class="text-gold text-sm font-bold">ضمان وتركيب</div>
+                        <p class="text-[11px] text-gray-400">فريق مهندسين محترف</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center space-y-3 border-r border-gray-800">
+                    <div class="w-12 h-12 rounded-xl overflow-hidden border border-gold/40 shadow-glow bg-black/50 p-1">
+                        <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div>
+                        <div class="text-gold text-sm font-bold">دعم فني</div>
+                        <p class="text-[11px] text-gray-400">خدمة عملاء على مدار الساعة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 text-center">
+                    <div onclick="filterByCategory('عشب صناعي')" class="group cursor-pointer">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-2xl overflow-hidden border-2 border-gold/40 shadow-glow group-hover:scale-105 transition duration-300">
+                            <img id="catImg-1" src="https://i.ibb.co/Z1NWtcFz/d04652e266742196ee35f142383a193f.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xs font-bold text-gray-200 group-hover:text-gold transition">عشب صناعي</h4>
+                    </div>
+                    <div onclick="filterByCategory('جلسات خارجية')" class="group cursor-pointer">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-2xl overflow-hidden border-2 border-gold/40 shadow-glow group-hover:scale-105 transition duration-300">
+                            <img id="catImg-2" src="https://i.ibb.co/LhHn7wh3/4db08e7c3cc56379ad70131b7e6d39ec.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xs font-bold text-gray-200 group-hover:text-gold transition">جلسات خارجية</h4>
+                    </div>
+                    <div onclick="filterByCategory('مظلات وسواتر')" class="group cursor-pointer">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-2xl overflow-hidden border-2 border-gold/40 shadow-glow group-hover:scale-105 transition duration-300">
+                            <img id="catImg-3" src="https://i.ibb.co/PstCRxzn/7ae6ab62f7dee3c19aa9de20e9674544.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xs font-bold text-gray-200 group-hover:text-gold transition">مظلات وسواتر</h4>
+                    </div>
+                    <div onclick="filterByCategory('إنارة ديكورية')" class="group cursor-pointer">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-2xl overflow-hidden border-2 border-gold/40 shadow-glow group-hover:scale-105 transition duration-300">
+                            <img id="catImg-4" src="https://i.ibb.co/xtWYyTkv/1601ea1084737548126487703d8403e1.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xs font-bold text-gray-200 group-hover:text-gold transition">إنارة ديكورية</h4>
+                    </div>
+                    <div onclick="filterByCategory('إنارة جدارية')" class="group cursor-pointer">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-2xl overflow-hidden border-2 border-gold/40 shadow-glow group-hover:scale-105 transition duration-300">
+                            <img id="catImg-5" src="https://i.ibb.co/s9SLsTQc/dc2c80f42762d9e4dbb4ad659ce3ccc7.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xs font-bold text-gray-200 group-hover:text-gold transition">إنارة جدارية</h4>
+                    </div>
+                    <div onclick="filterByCategory('شوايات وأفران')" class="group cursor-pointer">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-2xl overflow-hidden border-2 border-gold/40 shadow-glow group-hover:scale-110 transition duration-300">
+                            <img id="catImg-6" src="https://i.ibb.co/nM9pDR3q/bcdfc04de0214fb0f82e81edd47d5fae.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xs font-bold text-gray-200 group-hover:text-gold transition">شوايات وأفران</h4>
+                    </div>
+                    <div onclick="filterByCategory('أرضيات خارجية')" class="group cursor-pointer">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-2xl overflow-hidden border-2 border-gold/40 shadow-glow group-hover:scale-105 transition duration-300">
+                            <img id="catImg-7" src="https://i.ibb.co/nNrs2mvN/42ceaad9a8b4456c6787f647eed987d3.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xs font-bold text-gray-200 group-hover:text-gold transition">أرضيات خارجية</h4>
+                    </div>
+                    <div onclick="filterByCategory('ديكورات جدران')" class="group cursor-pointer">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-2xl overflow-hidden border-2 border-gold/40 shadow-glow group-hover:scale-105 transition duration-300">
+                            <img id="catImg-8" src="https://i.ibb.co/VcPHC43S/df4868f909a478d4de099ec355ee1470.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xs font-bold text-gray-200 group-hover:text-gold transition">ديكورات جدران</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-20 bg-luxsurface/40 border-y border-gold/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                    <div>
+                        <span id="productsSectionSubtitle" class="text-gold text-xs uppercase tracking-[0.3em] font-bold">✦ كتالوج المنتجات</span>
+                        <h2 id="productsSectionTitle" class="text-3xl sm:text-4xl font-black text-white mt-1">جميع المنتجات والخدمات الفاخرة</h2>
+                    </div>
+                    <div class="flex gap-2 bg-black/60 p-1.5 rounded-2xl border border-gold/20">
+                        <button id="btnAllProducts" onclick="switchProductView('all')" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-gold text-black shadow-glow transition">كل المنتجات</button>
+                        <button id="btnTopProducts" onclick="switchProductView('top')" class="px-5 py-2.5 rounded-xl text-xs font-bold text-gray-400 hover:text-white transition">الأكثر طلباً هذا الشهر</button>
+                    </div>
+                </div>
+                <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center text-gray-500 py-16 col-span-full glass-card rounded-2xl">جاري جلب المنتجات الفاخرة...</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                    <span class="text-gold text-xs uppercase tracking-[0.3em] font-bold">خدماتنا الملكية</span>
+                    <h2 class="text-3xl font-black text-white">حلول متكاملة لهندسة المساحات الخارجية</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="glass-card rounded-3xl overflow-hidden group hover:border-gold/40 transition duration-300">
+                        <div class="h-48 overflow-hidden relative">
+                            <img id="srvImg-1" src="https://i.ibb.co/7Jy3r618/93dded296e1cf126d4bf022402fadbfa.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                            <div class="absolute bottom-4 right-4 flex items-center gap-2">
+                                <span class="w-8 h-8 rounded-lg bg-gold/20 border border-gold/40 flex items-center justify-center text-gold font-black text-sm">01</span>
+                                <h3 class="text-lg font-bold text-white">تصميم الحدائق والأسطح</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-400 text-sm leading-relaxed">تحويل المساحات المكشوفة إلى جنات خضراء وجلسات عائلية مريحة ومقاومة للعوامل الجوية في أجواء المملكة.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-3xl overflow-hidden group hover:border-gold/40 transition duration-300">
+                        <div class="h-48 overflow-hidden relative">
+                            <img id="srvImg-2" src="https://i.ibb.co/nq1M1CfT/f6591c3dd77da65d826ad16d82636ec9.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                            <div class="absolute bottom-4 right-4 flex items-center gap-2">
+                                <span class="w-8 h-8 rounded-lg bg-gold/20 border border-gold/40 flex items-center justify-center text-gold font-black text-sm">02</span>
+                                <h3 class="text-lg font-bold text-white">أنظمة الإضاءة الخارجية</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-400 text-sm leading-relaxed">إضاءات معمارية مخفية وموجهة تضفي سحراً ورونقاً خاصاً على حديقتك ليلاً بأعلى معايير الأمان والكفاءة.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-3xl overflow-hidden group hover:border-gold/40 transition duration-300">
+                        <div class="h-48 overflow-hidden relative">
+                            <img id="srvImg-3" src="https://i.ibb.co/spZ60srP/8008b0e103799ea2e49ab8c7e592c550.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                            <div class="absolute bottom-4 right-4 flex items-center gap-2">
+                                <span class="w-8 h-8 rounded-lg bg-gold/20 border border-gold/40 flex items-center justify-center text-gold font-black text-sm">03</span>
+                                <h3 class="text-lg font-bold text-white">الشلالات والنوافير الحجرية</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-400 text-sm leading-relaxed">تصميم شلالات جدارية وديكورات مائية تمنح المكان أصوات مياه هادئة ومريحة للاسترخاء في منزلك.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 bg-luxsurface/30 border-y border-gold/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                    <span class="text-gold text-xs uppercase tracking-[0.3em] font-bold">✦ معرض التحولات</span>
+                    <h2 class="text-3xl font-black text-white">مشاريعنا قبل وبعد التنفيذ</h2>
+                </div>
+                <div id="projectsGrid" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-10 border border-gold/30 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                    <div class="flex flex-col items-center space-y-3">
+                        <div class="w-14 h-14 rounded-2xl overflow-hidden border border-gold/40 shadow-glow p-1 bg-black/60">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <h3 class="text-lg font-bold text-white">تصاميم مخصصة</h3>
+                        <p class="text-xs text-gray-400">حسب مساحة وذوقك الخاص</p>
+                    </div>
+                    <div class="flex flex-col items-center space-y-3 border-t md:border-t-0 md:border-r border-gray-800 pt-6 md:pt-0">
+                        <div class="w-14 h-14 rounded-2xl overflow-hidden border border-gold/40 shadow-glow p-1 bg-black/60">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <h3 class="text-lg font-bold text-white">معاينة ثلاثية الأبعاد</h3>
+                        <p class="text-xs text-gray-400">قبل بدء التنفيذ الفعلي</p>
+                    </div>
+                    <div class="flex flex-col items-center space-y-3 border-t md:border-t-0 md:border-r border-gray-800 pt-6 md:pt-0">
+                        <div class="w-14 h-14 rounded-2xl overflow-hidden border border-gold/40 shadow-glow p-1 bg-black/60">
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <h3 class="text-lg font-bold text-white">أسعار تنافسية</h3>
+                        <p class="text-xs text-gray-400">أفضل قيمة مقابل المال بالمملكة</p>
+                    </div>
+                    <div class="flex flex-col items-center space-y-3 border-t md:border-t-0 md:border-r border-gray-800 pt-6 md:pt-0">
+                        <div class="w-14 h-14 rounded-2xl overflow-hidden border border-gold/40 shadow-glow p-1 bg-black/60">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <h3 class="text-lg font-bold text-white">خبرة واسعة</h3>
+                        <p class="text-xs text-gray-400">أكثر من 1000 مشروع ناجح</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="orderModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 overflow-y-auto">
+            <div class="glass-card border border-gold/40 rounded-3xl max-w-xl w-full p-6 sm:p-8 relative shadow-2xl my-8 max-h-[90vh] overflow-y-auto">
+                <button onclick="closeOrderModal()" class="absolute top-5 left-5 text-gray-400 hover:text-gold text-2xl font-bold z-10">×</button>
+                <h3 class="text-2xl font-black text-gold mb-2">تأكيد طلب الخدمة أو المعاينة الميدانية</h3>
+                <p class="text-gray-400 text-xs mb-4">تصفح صور المنتج واستعرض تفاصيله، ثم أدخل بياناتك لزيارة فريق العمل الميداني.</p>
+                
+                <div id="modalGalleryContainer" class="mb-6 bg-black/50 p-4 rounded-2xl border border-gold/20">
+                    <div class="relative h-56 sm:h-64 rounded-xl overflow-hidden bg-black flex items-center justify-center mb-3">
+                        <img id="modalActiveImage" src="" alt="صورة المنتج" class="w-full h-full object-cover transition duration-300">
+                        <button type="button" onclick="prevModalImage()" class="absolute right-3 bg-black/60 hover:bg-gold hover:text-black text-gold border border-gold/40 w-10 h-10 rounded-full flex items-center justify-center text-lg font-black transition shadow-glow">‹</button>
+                        <button type="button" onclick="nextModalImage()" class="absolute left-3 bg-black/60 hover:bg-gold hover:text-black text-gold border border-gold/40 w-10 h-10 rounded-full flex items-center justify-center text-lg font-black transition shadow-glow">›</button>
+                        <div id="modalImageCounter" class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/70 text-gold text-[11px] px-3 py-1 rounded-full border border-gold/30 font-bold">1 / 1</div>
+                    </div>
+                    <div id="modalThumbnails" class="flex gap-2 overflow-x-auto pb-2"></div>
+                </div>
+
+                <form id="orderForm" onsubmit="submitOrder(event)" class="space-y-4">
+                    <input type="hidden" id="modalProductId">
+                    <input type="hidden" id="modalProductName">
+                    <input type="hidden" id="modalProductCategory">
+                    <div>
+                        <label class="block text-xs font-semibold mb-1 text-gold uppercase tracking-wider">الخدمة أو المنتج المطلوب</label>
+                        <input type="text" id="displayProductName" disabled class="w-full bg-black/60 border border-gold/20 rounded-xl p-3 text-gold font-bold text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold mb-1 text-gray-300 uppercase tracking-wider">اسم العميل الكامل</label>
+                        <input type="text" id="customerName" required class="w-full bg-black/60 border border-gray-800 rounded-xl p-3 text-white focus:border-gold outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold mb-1 text-gray-300 uppercase tracking-wider">رقم الهاتف (رقم سعودي)</label>
+                        <input type="tel" id="customerPhone" required placeholder="05XXXXXXXX" class="w-full bg-black/60 border border-gray-800 rounded-xl p-3 text-white focus:border-gold outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold mb-1 text-gray-300 uppercase tracking-wider">العنوان بالتفصيل (المدينة / الحي / الشارع) - إلزامي للخدمة الميدانية</label>
+                        <textarea id="customerAddress" required rows="2" placeholder="الرياض - حي..." class="w-full bg-black/60 border border-gray-800 rounded-xl p-3 text-white focus:border-gold outline-none text-sm"></textarea>
+                    </div>
+                    <div id="modalAreaContainer">
+                        <label class="block text-xs font-semibold mb-1 text-gray-300 uppercase tracking-wider">المساحة (بالمتر المربع)</label>
+                        <input type="number" id="customerArea" min="1" value="1" class="w-full bg-black/60 border border-gray-800 rounded-xl p-3 text-white focus:border-gold outline-none text-sm">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold mb-1 text-gray-300 uppercase tracking-wider">الكمية</label>
+                            <input type="number" id="customerQuantity" value="1" min="1" required class="w-full bg-black/60 border border-gray-800 rounded-xl p-3 text-white focus:border-gold outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold mb-1 text-gray-300 uppercase tracking-wider">ملاحظات إضافية</label>
+                            <input type="text" id="customerNotes" class="w-full bg-black/60 border border-gray-800 rounded-xl p-3 text-white focus:border-gold outline-none text-sm">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-gold via-gold-accent to-gold-dark text-black font-extrabold py-3.5 rounded-xl shadow-glow hover:opacity-90 transition mt-4">تأكيد وإرسال طلب المعاينة والتركيب</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="cartModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+            <div class="glass-card border border-gold/40 rounded-3xl max-w-2xl w-full p-8 relative shadow-2xl max-h-[85vh] flex flex-col">
+                <button onclick="closeCartModal()" class="absolute top-5 left-5 text-gray-400 hover:text-gold text-2xl font-bold">×</button>
+                <h3 class="text-2xl font-black text-gold mb-2">سلة طلباتي ومتابعة حالتها</h3>
+                <p class="text-gray-400 text-xs mb-6">هنا يمكنك متابعة حالة طلباتك الميدانية أو إلغاؤها إذا رغبت في ذلك.</p>
+                <div id="cartOrdersContainer" class="flex-1 overflow-y-auto space-y-4 pr-1">
+                    <div class="text-center text-gray-500 py-12">جاري تحميل طلباتك...</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="customDesignModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+            <div class="glass-card border border-gold/40 rounded-3xl max-w-xl w-full p-8 relative shadow-2xl">
+                <button onclick="closeCustomDesignModal()" class="absolute top-5 left-5 text-gray-400 hover:text-gold text-2xl font-bold">×</button>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl">✨</div>
+                    <div>
+                        <h3 class="text-2xl font-black text-gold">طلب تصميم حديقة أو سطح خاص</h3>
+                        <p class="text-gray-400 text-xs">املأ التفاصيل وسيقوم مهندس الديكور بالتواصل معك مباشرة</p>
+                    </div>
+                </div>
+                <form onsubmit="submitCustomDesign(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold mb-1 text-gray-300 uppercase tracking-wider">اسم العميل الكريم</label>
+                        <input type="text" id="customName" required class="w-full bg-black/60 border border-gray-800 rounded-xl p-3 text-white focus:border-gold outline-none text-sm">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold mb-1 text-gray-300 uppercase tracking-wider">رقم الجوال (السعودي)</label>
+                            <input type="tel" id="customPhone" required placeholder="05XXXXXXXX" class="w-full bg-black/60 border border-gray-800 rounded-xl p-3 text-white focus:border-gold outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold mb-1 text-gray-300 uppercase tracking-wider">نوع المساحة</label>
+                            <select id="customSpaceType" class="w-full bg-black/60 border border-gray-800 rounded-xl p-3 text-white focus:border-gold outline-none text-sm">
+                                <option>حديقة منزلية</option>
+                                <option>سطح فيلا</option>
+                                <option>استراحة / شalet</option>
+                                <option>مشروع تجاري</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold mb-1 text-gray-300 uppercase tracking-wider">وصف فكرتك أو التصميم المطلوب بالتفصيل</label>
+                        <textarea id="customDescription" required rows="3" placeholder="اكتب رغبتك (جلسة عربية، شلال، إضاءات مخفية، عشب صناعي...)" class="w-full bg-black/60 border border-gray-800 rounded-xl p-3 text-white focus:border-gold outline-none text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-gold via-gold-accent to-gold-dark text-black font-extrabold py-3.5 rounded-xl shadow-glow hover:opacity-90 transition mt-2">إرسال طلب التصميم الخاص</button>
+                </form>
+            </div>
+        </div>
+
+        <footer id="contact" class="bg-black border-t border-gold/20 py-16 text-center text-gray-400 text-sm">
+            <div class="max-w-7xl mx-auto px-4 space-y-6">
+                <div class="flex items-center justify-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-black p-0.5 flex items-center justify-center">
+                        <div class="w-full h-full bg-black rounded-[10px] flex items-center justify-center">
+                            <span class="text-gold font-black text-lg">F</span>
+                        </div>
+                    </div>
+                    <span class="text-xl font-black text-white tracking-widest">FIKRAH LANDSCAPING</span>
+                </div>
+                <div id="companyFooterInfo" class="max-w-2xl mx-auto text-sm leading-relaxed text-gray-400"></div>
+                <div class="pt-6 border-t border-gray-900 text-xs text-gray-600">
+                    © 2026 FIKRAH LANDSCAPING. جميع الحقوق محفوظة.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="ownerAuthModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="glass-card border border-gold/40 rounded-3xl max-w-md w-full p-8 relative shadow-2xl text-center space-y-6">
+            <button onclick="closeOwnerAuthModal()" class="absolute top-5 left-5 text-gray-400 hover:text-gold text-2xl font-bold">×</button>
+            <div class="w-16 h-16 rounded-2xl bg-gold/10 border border-gold/30 mx-auto flex items-center justify-center text-gold text-3xl font-black">🔒</div>
+            <div>
+                <h3 class="text-2xl font-black text-gold mb-1">دخول المالك</h3>
+                <p class="text-gray-400 text-xs">منطقة آمنة ومخصصة لصاحب الموقع فقط</p>
+            </div>
+            <form onsubmit="verifyOwnerPassword(event)" class="space-y-4 text-right">
+                <div>
+                    <label class="block text-xs font-semibold mb-1 text-gold uppercase tracking-wider">كلمة مرور الحماية</label>
+                    <input type="password" id="ownerPasswordInput" required placeholder="أدخل كلمة المرور السرية..." class="w-full bg-black/80 border border-gold/30 rounded-xl p-3.5 text-white focus:border-gold outline-none text-sm">
+                </div>
+                <div id="ownerAuthError" class="text-red-400 text-xs text-center hidden">كلمة المرور غير صحيحة. يرجى المحاولة مرة أخرى.</div>
+                <button type="submit" class="w-full bg-gradient-to-r from-gold via-gold-accent to-gold-dark text-black font-extrabold py-3.5 rounded-xl shadow-glow hover:opacity-90 transition">تحقق ودخول</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="adminView" class="hidden min-h-screen flex flex-col bg-[#050505]">
+        <header class="bg-black/90 border-b border-gold/30 px-8 py-5 flex justify-between items-center backdrop-blur-xl sticky top-0 z-40">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold via-gold-dark to-black p-0.5 shadow-glow flex items-center justify-center">
+                    <div class="w-full h-full bg-luxblack rounded-[10px] flex items-center justify-center">
+                        <span class="text-gold font-black text-lg">F</span>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-gold font-black text-lg tracking-wider">لوحة القيادة الإمبراطورية | FIKRAH ADMIN</h1>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">إدارة متكاملة بضغطة زر واحدة</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="hidden sm:inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold">● نظام الإدارة متصل وآمن</span>
+                <a href="#" onclick="exitAdminPanel(); return false;" class="text-xs text-gray-200 hover:text-black hover:bg-gold transition font-bold border border-gold/30 px-4 py-2 rounded-xl shadow-glow">العودة للموقع الرئيسي ↗</a>
+            </div>
+        </header>
+
+        <div class="flex flex-1 flex-col lg:flex-row">
+            <aside class="w-full lg:w-72 bg-black/70 border-l border-gold/20 p-6 space-y-3 backdrop-blur-md">
+                <button onclick="switchAdminTab('dashboard')" id="tab-btn-dashboard" class="admin-sidebar-btn w-full text-right px-5 py-3.5 rounded-2xl font-bold bg-gold text-black shadow-glow transition text-sm flex items-center gap-3">
+                    <span class="text-lg">📊</span>
+                    <span>لوحة المؤشرات والملخص</span>
+                </button>
+                <button onclick="switchAdminTab('products')" id="tab-btn-products" class="admin-sidebar-btn w-full text-right px-5 py-3.5 rounded-2xl font-semibold hover:bg-gold/10 text-gray-300 hover:text-gold transition text-sm flex items-center gap-3">
+                    <span class="text-lg">📦</span>
+                    <span>إدارة المنتجات والخدمات</span>
+                </button>
+                <button onclick="switchAdminTab('orders')" id="tab-btn-orders" class="admin-sidebar-btn w-full text-right px-5 py-3.5 rounded-2xl font-semibold hover:bg-gold/10 text-gray-300 hover:text-gold transition text-sm flex items-center gap-3">
+                    <span class="text-lg">📋</span>
+                    <span>طلبات الزبائن والمتجر</span>
+                </button>
+                <button onclick="switchAdminTab('customDesigns')" id="tab-btn-customDesigns" class="admin-sidebar-btn w-full text-right px-5 py-3.5 rounded-2xl font-semibold hover:bg-gold/10 text-gray-300 hover:text-gold transition text-sm flex items-center gap-3">
+                    <span class="text-lg">✨</span>
+                    <span>طلبات التصاميم الخاصة</span>
+                </button>
+                <button onclick="switchAdminTab('projects')" id="tab-btn-projects" class="admin-sidebar-btn w-full text-right px-5 py-3.5 rounded-2xl font-semibold hover:bg-gold/10 text-gray-300 hover:text-gold transition text-sm flex items-center gap-3">
+                    <span class="text-lg">🌿</span>
+                    <span>معرض المشاريع (قبل وبعد)</span>
+                </button>
+                <button onclick="switchAdminTab('settings')" id="tab-btn-settings" class="admin-sidebar-btn w-full text-right px-5 py-3.5 rounded-2xl font-semibold hover:bg-gold/10 text-gray-300 hover:text-gold transition text-sm flex items-center gap-3">
+                    <span class="text-lg">⚙️</span>
+                    <span>إعدادات الشركة والتواصل</span>
+                </button>
+            </aside>
+
+            <main class="flex-1 p-6 lg:p-10 space-y-8 overflow-y-auto">
+                
+                <div id="admin-tab-dashboard" class="admin-tab-content space-y-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div class="glass-card p-6 rounded-3xl border border-gold/30 relative overflow-hidden">
+                            <div class="absolute -left-4 -bottom-4 text-gold/10 text-7xl font-black">📦</div>
+                            <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">إجمالي المنتجات والخدمات</span>
+                            <h3 id="statTotalProducts" class="text-4xl font-black text-gold mt-2">0</h3>
+                            <p class="text-[11px] text-gray-500 mt-1">منتج وخدمة معروضة حالياً</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-3xl border border-gold/30 relative overflow-hidden">
+                            <div class="absolute -left-4 -bottom-4 text-gold/10 text-7xl font-black">📋</div>
+                            <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">طلبات المعاينة والتركيب الميداني</span>
+                            <h3 id="statTotalOrders" class="text-4xl font-black text-gold mt-2">0</h3>
+                            <p class="text-[11px] text-gray-500 mt-1">طلب فريد من الزبائن</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-3xl border border-gold/30 relative overflow-hidden">
+                            <div class="absolute -left-4 -bottom-4 text-gold/10 text-7xl font-black">✨</div>
+                            <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">طلبات التصاميم الخاصة</span>
+                            <h3 id="statTotalCustom" class="text-4xl font-black text-gold mt-2">0</h3>
+                            <p class="text-[11px] text-gray-500 mt-1">طلب تصميم حديقة / سطح</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-3xl border border-gold/20 space-y-4">
+                        <h3 class="text-xl font-bold text-gold">مرحباً بك في لوحة تحكم "فكرة للاندسكيب" الفاخرة</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            تم تطوير هذه الواجهة خصيصاً لتمنحك تحكماً كاملاً، سهلاً، وسريعاً في جميع محتويات موقعك بالمملكة العربية السعودية. يمكنك إضافة المنتجات مع صور متعددة، متابعة طلبات المعاينة الميدانية للعملاء والرد عليها، إدارة التصاميم الخاصة، وتحديث بيانات التواصل بلمسة زر واحدة وبأعلى معايير الجودة والأمان.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="admin-tab-products" class="admin-tab-content hidden space-y-8">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-2xl font-black text-gold">إدارة المنتجات والخدمات</h2>
+                    </div>
+                    <form onsubmit="handleProductSubmit(event)" class="glass-card border border-gold/30 p-8 rounded-3xl space-y-6 max-w-4xl shadow-2xl">
+                        <input type="hidden" id="editProductId">
+                        <h3 id="productFormTitle" class="text-lg font-bold text-gold border-b border-gold/20 pb-3">إضافة منتج أو خدمة جديدة</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold mb-2 text-gray-300">اسم المنتج/الخدمة</label>
+                                <input type="text" id="newProdName" required class="w-full bg-luxblack border border-gray-800 rounded-xl p-3.5 text-white text-sm outline-none focus:border-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold mb-2 text-gray-300">السعر (بالريال السعودي)</label>
+                                <input type="number" id="newProdPrice" required class="w-full bg-luxblack border border-gray-800 rounded-xl p-3.5 text-white text-sm outline-none focus:border-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold mb-2 text-gray-300">التصنيف</label>
+                                <input type="text" id="newProdCategory" required placeholder="مثال: جلسات خارجية أو إنارة ديكورية" class="w-full bg-luxblack border border-gray-800 rounded-xl p-3.5 text-white text-sm outline-none focus:border-gold">
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-4 border-t border-gray-800">
+                            <label class="block text-xs font-bold text-gold">إضافة صور المنتج (حتى 10 صور من الهاتف/الجهاز)</label>
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-3" id="imageSlotsContainer"></div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold mb-2 text-gray-300">وصف المنتج المفصل</label>
+                            <textarea id="newProdDesc" rows="3" required class="w-full bg-luxblack border border-gray-800 rounded-xl p-3.5 text-white text-sm outline-none focus:border-gold"></textarea>
+                        </div>
+                        <div class="flex gap-4 pt-2">
+                            <button type="submit" id="productSubmitBtn" class="bg-gradient-to-r from-gold via-gold-accent to-gold-dark text-black font-extrabold px-8 py-3.5 rounded-xl hover:opacity-90 transition text-sm shadow-glow">إضافة ونشر فوراً</button>
+                            <button type="button" id="cancelEditBtn" onclick="resetProductForm()" class="hidden bg-gray-800 text-gray-300 font-bold px-8 py-3.5 rounded-xl transition text-sm">إلغاء التعديل</button>
+                        </div>
+                    </form>
+
+                    <h3 class="text-xl font-bold text-white pt-6 border-t border-gray-800">المنتجات المعروضة حالياً</h3>
+                    <div id="adminProductsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                </div>
+
+                <div id="admin-tab-orders" class="admin-tab-content hidden space-y-6">
+                    <h2 class="text-2xl font-black text-gold">إدارة طلبات المعاينة والتركيب الميداني ومعلومات التنفيذ</h2>
+                    <div id="adminOrdersMobileList" class="grid grid-cols-1 gap-4"></div>
+                </div>
+
+                <div id="admin-tab-customDesigns" class="admin-tab-content hidden space-y-6">
+                    <h2 class="text-2xl font-black text-gold">طلبات التصاميم الخاصة للحدائق والأسطح</h2>
+                    <div id="adminCustomMobileList" class="grid grid-cols-1 gap-4"></div>
+                </div>
+
+                <div id="admin-tab-projects" class="admin-tab-content hidden space-y-8">
+                    <h2 class="text-2xl font-black text-gold">إدارة مشاريع قبل وبعد التنفيذ</h2>
+                    <form onsubmit="handleProjectSubmit(event)" class="glass-card border border-gold/30 p-8 rounded-3xl space-y-6 max-w-2xl shadow-2xl">
+                        <h3 class="text-lg font-bold text-gold">إضافة مشروع جديد للمعرض (من معرض الهاتف)</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="bg-luxblack border border-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-3 text-center">
+                                <input type="file" id="projBeforeFile" accept="image/*" class="hidden" onchange="handleProjectImageSelection('before', this)">
+                                <div class="w-full h-36 rounded-xl bg-gray-900 border border-dashed border-gray-700 flex items-center justify-center overflow-hidden relative cursor-pointer group" onclick="document.getElementById('projBeforeFile').click()">
+                                    <span id="projBeforePlaceholder" class="text-xs text-gray-400 group-hover:text-gold transition">اضغط لاختيار صورة (قبل)</span>
+                                    <img id="projBeforeImgPreview" class="w-full h-full object-cover hidden">
+                                </div>
+                                <button type="button" onclick="document.getElementById('projBeforeFile').click()" class="w-full bg-gold/10 text-gold border border-gold/30 text-xs py-2 rounded-lg hover:bg-gold/20 transition font-bold">اختيار صورة قبل من الهاتف</button>
+                            </div>
+
+                            <div class="bg-luxblack border border-gray-800 rounded-2xl p-4 flex flex-col items-center justify-center space-y-3 text-center">
+                                <input type="file" id="projAfterFile" accept="image/*" class="hidden" onchange="handleProjectImageSelection('after', this)">
+                                <div class="w-full h-36 rounded-xl bg-gray-900 border border-dashed border-gray-700 flex items-center justify-center overflow-hidden relative cursor-pointer" onclick="document.getElementById('projAfterFile').click()">
+                                    <span id="projAfterPlaceholder" class="text-xs text-gray-400 group-hover:text-gold transition">اضغط لاختيار صورة (بعد)</span>
+                                    <img id="projAfterImgPreview" class="w-full h-full object-cover hidden">
+                                </div>
+                                <button type="button" onclick="document.getElementById('projAfterFile').click()" class="w-full bg-gold/10 text-gold border border-gold/30 text-xs py-2 rounded-lg hover:bg-gold/20 transition font-bold">اختيار صورة بعد من الهاتف</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold mb-2 text-gray-300">وصف تحول المشروع</label>
+                            <textarea id="projDesc" rows="3" required placeholder="اكتب تفاصيل التحول (تم تحويل السطح إلى جلسة ملكية مع عشب صناعي...)" class="w-full bg-luxblack border border-gray-800 rounded-xl p-3.5 text-white text-sm outline-none focus:border-gold"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-gold via-gold-accent to-gold-dark text-black font-extrabold px-8 py-3.5 rounded-xl hover:opacity-90 transition text-sm shadow-glow">إضافة ونشر المشروع للمعرض</button>
+                    </form>
+
+                    <h3 class="text-xl font-bold text-white pt-6 border-t border-gray-800">المشاريع الحالية</h3>
+                    <div id="adminProjectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                </div>
+
+                <div id="admin-tab-settings" class="admin-tab-content hidden space-y-6">
+                    <h2 class="text-2xl font-black text-gold">إعدادات الشركة ومعلومات التواصل</h2>
+                    <p class="text-xs text-gray-400">هذه البيانات تظهر في أسفل الموقع وفي الفوتر لتسهيل تواصل الزبائن وإرسال الطلبات والأرقام الخاصة بك.</p>
+                    <form onsubmit="saveSellerSettings(event)" class="space-y-5 max-w-2xl glass-card border border-gold/30 p-8 rounded-3xl shadow-2xl">
+                        <div>
+                            <label class="block text-xs font-semibold mb-2 text-gray-300">اسم الشركة</label>
+                            <input type="text" id="sellerCompName" class="w-full bg-luxblack border border-gray-800 rounded-xl p-3.5 text-white text-sm outline-none focus:border-gold">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold mb-2 text-gray-300">رقم الهاتف لاستقبال الطلبات</label>
+                                <input type="text" id="sellerPhone" class="w-full bg-luxblack border border-gray-800 rounded-xl p-3.5 text-white text-sm outline-none focus:border-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold mb-2 text-gray-300">رقم واتساب للتواصل</label>
+                                <input type="text" id="sellerWhatsapp" class="w-full bg-luxblack border border-gray-800 rounded-xl p-3.5 text-white text-sm outline-none focus:border-gold">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold mb-2 text-gray-300">البريد الإلكتروني للإشعارات</label>
+                            <input type="email" id="sellerEmail" class="w-full bg-luxblack border border-gray-800 rounded-xl p-3.5 text-white text-sm outline-none focus:border-gold">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold mb-1 text-gray-300">العنوان الرئيسي (المدينة / الحي)</label>
+                            <input type="text" id="sellerAddress" class="w-full bg-luxblack border border-gray-800 rounded-xl p-3.5 text-white text-sm outline-none focus:border-gold">
+                        </div>
+                        <button type="submit" class="bg-gradient-to-r from-gold via-gold-accent to-gold-dark text-black font-extrabold px-8 py-3.5 rounded-xl hover:opacity-90 transition text-sm shadow-glow">حفظ وتحديث المعلومات</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { initializeFirestore, collection, getDocs, addDoc, deleteDoc, doc, setDoc, updateDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyBw67kT6UMk05Ya5s6zMTKYhDJiFgC7LUI",
+          authDomain: "fikrahe.firebaseapp.com",
+          projectId: "fikrahe",
+          storageBucket: "fikrahe.firebasestorage.app",
+          messagingSenderId: "6863258830",
+          appId: "1:6863258830:web:587c19f9d97610ed053c9f",
+          measurementId: "G-Z4C0897F47"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = initializeFirestore(app, {
+            experimentalForceLongPolling: true,
+            locationId: 'eur3'
+        });
+
+        let allProductsCache = [];
+        let currentProductFilter = 'all'; 
+        let currentCategoryFilter = '';
+        let productImagesArray = new Array(10).fill("");
+        let projectBeforeBase64 = "";
+        let projectAfterBase64 = "";
+
+        let currentModalImages = [];
+        let currentModalImageIndex = 0;
+
+        const imageSlotsContainer = document.getElementById('imageSlotsContainer');
+        if (imageSlotsContainer) {
+            let slotsHTML = '';
+            for(let i=1; i<=10; i++) {
+                slotsHTML += `
+                    <div class="relative bg-luxblack border border-gray-800 rounded-2xl p-2.5 flex flex-col items-center justify-center space-y-2 text-center">
+                        <input type="file" id="prodImageFile${i}" accept="image/*" class="hidden" onchange="handleImageSelection(${i}, this)">
+                        <div id="imagePreviewContainer${i}" class="w-full h-24 rounded-xl bg-gray-900 border border-dashed border-gray-700 flex items-center justify-center overflow-hidden relative cursor-pointer group" onclick="document.getElementById('prodImageFile${i}').click()">
+                            <span id="imagePlaceholderText${i}" class="text-[11px] text-gray-400 group-hover:text-gold transition">صورة ${i}</span>
+                            <img id="imagePreviewImg${i}" class="w-full h-full object-cover hidden">
+                        </div>
+                        <div class="flex gap-1.5 w-full">
+                            <button type="button" onclick="document.getElementById('prodImageFile${i}').click()" class="flex-1 bg-gold/10 text-gold border border-gold/30 text-[11px] py-1.5 rounded-lg hover:bg-gold/20 transition font-bold">رفع</button>
+                            <button type="button" onclick="clearImageSlot(${i})" class="bg-red-600/20 text-red-400 border border-red-500/30 text-[11px] px-2 py-1.5 rounded-lg hover:bg-red-600/40 transition">حذف</button>
+                        </div>
+                    </div>
+                `;
+            }
+            imageSlotsContainer.innerHTML = slotsHTML;
+        }
+
+        function resizeAndCompressImage(file, callback) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    let width = img.width;
+                    let height = img.height;
+                    const maxDim = 800;
+
+                    if (width > height) {
+                        if (width > maxDim) {
+                            height *= maxDim / width;
+                            width = maxDim;
+                        }
+                    } else {
+                        if (height > maxDim) {
+                            width *= maxDim / height;
+                            height = maxDim;
+                        }
+                    }
+
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+                    const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+                    callback(dataUrl);
+                }
+                img.src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+
+        window.handleImageSelection = function(index, inputElement) {
+            if (inputElement.files && inputElement.files[0]) {
+                resizeAndCompressImage(inputElement.files[0], function(compressedDataUrl) {
+                    productImagesArray[index - 1] = compressedDataUrl;
+                    const imgEl = document.getElementById(`imagePreviewImg${index}`);
+                    const textEl = document.getElementById(`imagePlaceholderText${index}`);
+                    if(imgEl && textEl) {
+                        imgEl.src = compressedDataUrl;
+                        imgEl.classList.remove('hidden');
+                        textEl.classList.add('hidden');
+                    }
+                });
+            }
+        };
+
+        window.clearImageSlot = function(index) {
+            productImagesArray[index - 1] = "";
+            const fileInput = document.getElementById(`prodImageFile${index}`);
+            const imgEl = document.getElementById(`imagePreviewImg${index}`);
+            const textEl = document.getElementById(`imagePlaceholderText${index}`);
+            if(fileInput) fileInput.value = "";
+            if(imgEl) {
+                imgEl.src = "";
+                imgEl.classList.add('hidden');
+            }
+            if(textEl) {
+                textEl.classList.remove('hidden');
+            }
+        };
+
+        window.handleProjectImageSelection = function(type, inputElement) {
+            if (inputElement.files && inputElement.files[0]) {
+                resizeAndCompressImage(inputElement.files[0], function(compressedDataUrl) {
+                    if (type === 'before') {
+                        projectBeforeBase64 = compressedDataUrl;
+                        const img = document.getElementById('projBeforeImgPreview');
+                        const ph = document.getElementById('projBeforePlaceholder');
+                        if(img && ph) {
+                            img.src = compressedDataUrl;
+                            img.classList.remove('hidden');
+                            ph.classList.add('hidden');
+                        }
+                    } else {
+                        projectAfterBase64 = compressedDataUrl;
+                        const img = document.getElementById('projAfterImgPreview');
+                        const ph = document.getElementById('projAfterPlaceholder');
+                        if(img && ph) {
+                            img.src = compressedDataUrl;
+                            img.classList.remove('hidden');
+                            ph.classList.add('hidden');
+                        }
+                    }
+                });
+            }
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadClientProducts();
+            loadClientProjects();
+            loadClientCompanyInfo();
+            loadClientSiteImages();
+            updateCartBadge();
+        });
+
+        window.filterByCategory = function(categoryName) {
+            currentCategoryFilter = categoryName;
+            const titleEl = document.getElementById('productsSectionTitle');
+            const subTitleEl = document.getElementById('productsSectionSubtitle');
+            if(titleEl) titleEl.innerText = `منتجات تصنيف: ${categoryName}`;
+            if(subTitleEl) subTitleEl.innerText = `✦ تصفية سريعة`;
+            
+            const productsSec = document.getElementById('products');
+            if(productsSec) {
+                productsSec.scrollIntoView({ behavior: 'smooth' });
+            }
+            applyProductFilterAndDisplay();
+        };
+
+        window.handleSearchInput = function(query) {
+            const secretCode = "VX9-ALPHA-7QZ-4821-KR";
+            const trimmedQuery = query.trim();
+
+            if (trimmedQuery === secretCode) {
+                document.getElementById('searchInput').value = '';
+                openOwnerAuthModal();
+                return;
+            }
+
+            const grid = document.getElementById('productsGrid');
+            if (!grid) return;
+
+            if (trimmedQuery === "") {
+                applyProductFilterAndDisplay();
+                return;
+            }
+
+            const filtered = allProductsCache.filter(p => 
+                p.name.toLowerCase().includes(trimmedQuery.toLowerCase()) || 
+                p.category.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
+                p.description.toLowerCase().includes(trimmedQuery.toLowerCase())
+            );
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="text-center text-gray-500 py-16 col-span-full glass-card rounded-2xl">عذراً، لم نجد أي منتج مطابق لبحثك.</div>';
+            } else {
+                displayProducts(filtered);
+            }
+        };
+
+        window.switchProductView = function(viewType) {
+            currentProductFilter = viewType;
+            currentCategoryFilter = ''; 
+            const btnAll = document.getElementById('btnAllProducts');
+            const btnTop = document.getElementById('btnTopProducts');
+            const titleEl = document.getElementById('productsSectionTitle');
+            const subTitleEl = document.getElementById('productsSectionSubtitle');
+
+            if (viewType === 'all') {
+                btnAll.className = "px-5 py-2.5 rounded-xl text-xs font-bold bg-gold text-black shadow-glow transition";
+                btnTop.className = "px-5 py-2.5 rounded-xl text-xs font-bold text-gray-400 hover:text-white transition";
+                titleEl.innerText = "جميع المنتجات والخدمات الفاخرة";
+                subTitleEl.innerText = "✦ كتالوج المنتجات";
+            } else {
+                btnTop.className = "px-5 py-2.5 rounded-xl text-xs font-bold bg-gold text-black shadow-glow transition";
+                btnAll.className = "px-5 py-2.5 rounded-xl text-xs font-bold text-gray-400 hover:text-white transition";
+                titleEl.innerText = "المنتجات الأكثر طلباً هذا الشهر";
+                subTitleEl.innerText = "✦ الأكثر طلباً";
+            }
+            applyProductFilterAndDisplay();
+        };
+
+        function applyProductFilterAndDisplay() {
+            let list = allProductsCache;
+            if (currentCategoryFilter !== '') {
+                list = list.filter(p => p.category && p.category.trim() === currentCategoryFilter.trim());
+            } else if (currentProductFilter === 'top') {
+                const topList = list.filter(p => p.rating >= 4.9 || p.isTop);
+                if (topList.length > 0) list = topList;
+            }
+            displayProducts(list);
+        }
+
+        window.openOwnerAuthModal = function() {
+            document.getElementById('ownerPasswordInput').value = '';
+            document.getElementById('ownerAuthError').classList.add('hidden');
+            document.getElementById('ownerAuthModal').classList.remove('hidden');
+            document.getElementById('ownerAuthModal').classList.add('flex');
+        };
+
+        window.closeOwnerAuthModal = function() {
+            document.getElementById('ownerAuthModal').classList.remove('flex');
+            document.getElementById('ownerAuthModal').classList.add('hidden');
+        };
+
+        window.verifyOwnerPassword = function(e) {
+            e.preventDefault();
+            const passInput = document.getElementById('ownerPasswordInput').value;
+            const correctPass = "N7@qL92#XvP!6048";
+
+            if (passInput === correctPass) {
+                closeOwnerAuthModal();
+                openAdminPanel();
+            } else {
+                document.getElementById('ownerAuthError').classList.remove('hidden');
+            }
+        };
+
+        window.openAdminPanel = function() {
+            document.getElementById('clientView').classList.add('hidden');
+            document.getElementById('adminView').classList.remove('hidden');
+            loadAdminData();
+        };
+
+        window.exitAdminPanel = function() {
+            document.getElementById('adminView').classList.add('hidden');
+            document.getElementById('clientView').classList.remove('hidden');
+            loadClientProducts();
+            loadClientProjects();
+            loadClientCompanyInfo();
+            loadClientSiteImages();
+            updateCartBadge();
+        };
+
+        window.switchAdminTab = function(tabName) {
+            document.querySelectorAll('.admin-tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`admin-tab-${tabName}`).classList.remove('hidden');
+            
+            document.querySelectorAll('.admin-sidebar-btn').forEach(btn => {
+                btn.className = "admin-sidebar-btn w-full text-right px-5 py-3.5 rounded-2xl font-semibold hover:bg-gold/10 text-gray-300 hover:text-gold transition text-sm flex items-center gap-3";
+            });
+            const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+            if(activeBtn) {
+                activeBtn.className = "admin-sidebar-btn w-full text-right px-5 py-3.5 rounded-2xl font-bold bg-gold text-black shadow-glow transition text-sm flex items-center gap-3";
+            }
+        };
+
+        async function loadClientProducts() {
+            const grid = document.getElementById('productsGrid');
+            if (!grid) return;
+            try {
+                const snap = await getDocs(collection(db, "posts"));
+                allProductsCache = [];
+                snap.forEach(d => {
+                    allProductsCache.push({ id: d.id, ...d.data() });
+                });
+
+                if (allProductsCache.length === 0) {
+                    grid.innerHTML = '<div class="text-center text-gray-500 py-16 col-span-full glass-card rounded-2xl">لا توجد منتجات مضافة حالياً.</div>';
+                    return;
+                }
+                applyProductFilterAndDisplay();
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        function displayProducts(productsList) {
+            const grid = document.getElementById('productsGrid');
+            if (!grid) return;
+            if (productsList.length === 0) {
+                grid.innerHTML = '<div class="text-center text-gray-500 py-16 col-span-full glass-card rounded-2xl">لا توجد منتجات ضمن هذه الفئة حالياً.</div>';
+                return;
+            }
+            grid.innerHTML = '';
+            productsList.forEach(p => {
+                const mainImg = (p.images && p.images.length > 0 && p.images[0]) ? p.images[0] : (p.imageUrl || 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=crop');
+                
+                grid.innerHTML += `
+                    <div class="glass-card rounded-3xl overflow-hidden shadow-2xl group transition duration-500 hover:-translate-y-2 flex flex-col justify-between">
+                        <div>
+                            <div class="h-64 overflow-hidden relative">
+                                <img src="${mainImg}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-gold px-3 py-1 rounded-full text-xs border border-gold/30 font-semibold">${p.category || 'ديكور'}</span>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-1 text-white group-hover:text-gold transition">${p.name}</h3>
+                                <p class="text-gray-400 text-xs mb-3 line-clamp-2 leading-relaxed">${p.description}</p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <div class="flex items-center justify-between mb-4 border-t border-gray-800 pt-3">
+                                <span class="text-xl font-black text-gold">${p.price} ريال</span>
+                                <span class="text-amber-400 text-xs font-semibold">★ ${p.rating || '5.0'}</span>
+                            </div>
+                            <button onclick="openOrderModalFromProduct('${p.id}')" class="w-full bg-gradient-to-r from-gold via-gold-accent to-gold-dark text-black font-extrabold py-3 rounded-xl hover:opacity-90 transition shadow-glow text-xs flex items-center justify-center gap-2">
+                                <span>طلب معاينة وتركيب</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        async function loadClientProjects() {
+            const grid = document.getElementById('projectsGrid');
+            if (!grid) return;
+            try {
+                const snap = await getDocs(collection(db, "projects"));
+                if (snap.empty) {
+                    grid.innerHTML = '<div class="text-center text-gray-500 py-16 col-span-full glass-card rounded-2xl">لا توجد مشاريع مضافة حالياً.</div>';
+                    return;
+                }
+                grid.innerHTML = '';
+                snap.forEach((d) => {
+                    const prj = d.data();
+                    grid.innerHTML += `
+                        <div class="glass-card p-6 rounded-3xl space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="space-y-1">
+                                    <span class="text-[10px] text-red-400 font-bold uppercase tracking-wider">قبل التنفيذ</span>
+                                    <div class="h-48 rounded-2xl overflow-hidden border border-red-500/25">
+                                        <img src="${prj.beforeImage}" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] text-emerald-400 font-bold uppercase tracking-wider">بعد التحول الملكي</span>
+                                    <div class="h-48 rounded-2xl overflow-hidden border border-emerald-500/25 shadow-glow">
+                                        <img src="${prj.afterImage}" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-xs leading-relaxed pt-2 border-t border-gray-800">${prj.description}</p>
+                        </div>
+                    `;
+                });
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        async function loadClientCompanyInfo() {
+            try {
+                const docSnap = await getDoc(doc(db, "companyInfo", "main"));
+                if (docSnap.exists()) {
+                    const info = docSnap.data();
+                    const footer = document.getElementById('companyFooterInfo');
+                    if (footer) {
+                        footer.innerHTML = `
+                            <p class="text-gold font-bold text-base mb-2">${info.name || 'FIKRAH LANDSCAPING'}</p>
+                            <p>العنوان: ${info.address || ''} • الهاتف: ${info.phone || ''} • واتساب: ${info.whatsapp || ''}</p>
+                            <p class="mt-1">البريد الإلكتروني: ${info.email || ''}</p>
+                        `;
+                    }
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        async function loadClientSiteImages() {
+            try {
+                const docSnap = await getDoc(doc(db, "siteContent", "images"));
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    for(let i=1; i<=8; i++) {
+                        if(data[`cat-${i}`]) {
+                            const imgEl = document.getElementById(`catImg-${i}`);
+                            if(imgEl) imgEl.src = data[`cat-${i}`];
+                        }
+                    }
+                    for(let i=1; i<=3; i++) {
+                        if(data[`srv-${i}`]) {
+                            const imgEl = document.getElementById(`srvImg-${i}`);
+                            if(imgEl) imgEl.src = data[`srv-${i}`];
+                        }
+                    }
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        window.openOrderModalFromProduct = function(productId) {
+            const product = allProductsCache.find(p => p.id === productId);
+            if (!product) return;
+
+            let imgs = [];
+            if (product.images && Array.isArray(product.images)) {
+                imgs = product.images.filter(img => img && img.trim() !== "");
+            }
+            if (imgs.length === 0 && product.imageUrl) {
+                imgs = [product.imageUrl];
+            }
+            if (imgs.length === 0) {
+                imgs = ['https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=crop'];
+            }
+
+            currentModalImages = imgs;
+            currentModalImageIndex = 0;
+
+            document.getElementById('modalProductId').value = product.id;
+            document.getElementById('modalProductName').value = product.name;
+            document.getElementById('modalProductCategory').value = product.category || '';
+            document.getElementById('displayProductName').value = product.name;
+            document.getElementById('orderForm').reset();
+            document.getElementById('modalProductId').value = product.id;
+            document.getElementById('modalProductName').value = product.name;
+            document.getElementById('modalProductCategory').value = product.category || '';
+            document.getElementById('displayProductName').value = product.name;
+
+            const areaContainer = document.getElementById('modalAreaContainer');
+            if (product.category && product.category.trim() === 'إنارة ديكورية') {
+                if (areaContainer) areaContainer.classList.add('hidden');
+            } else {
+                if (areaContainer) areaContainer.classList.remove('hidden');
+            }
+
+            updateModalGalleryDisplay();
+
+            document.getElementById('orderModal').classList.remove('hidden');
+            document.getElementById('orderModal').classList.add('flex');
+        };
+
+        window.updateModalGalleryDisplay = function() {
+            const activeImgEl = document.getElementById('modalActiveImage');
+            const counterEl = document.getElementById('modalImageCounter');
+            const thumbsContainer = document.getElementById('modalThumbnails');
+
+            if (currentModalImages.length > 0) {
+                activeImgEl.src = currentModalImages[currentModalImageIndex];
+                counterEl.innerText = `${currentModalImageIndex + 1} / ${currentModalImages.length}`;
+            }
+
+            if (thumbsContainer) {
+                let thumbsHTML = '';
+                currentModalImages.forEach((imgUrl, idx) => {
+                    const isActive = idx === currentModalImageIndex;
+                    const borderStyle = isActive ? 'border-gold shadow-glow scale-105' : 'border-gray-800 opacity-60 hover:opacity-100';
+                    thumbsHTML += `
+                        <div onclick="setModalImageIndex(${idx})" class="w-16 h-16 rounded-xl overflow-hidden border-2 ${borderStyle} cursor-pointer flex-shrink-0 transition">
+                            <img src="${imgUrl}" class="w-full h-full object-cover">
+                        </div>
+                    `;
+                });
+                thumbsContainer.innerHTML = thumbsHTML;
+            }
+        };
+
+        window.setModalImageIndex = function(index) {
+            currentModalImageIndex = index;
+            updateModalGalleryDisplay();
+        };
+
+        window.prevModalImage = function() {
+            if (currentModalImages.length <= 1) return;
+            currentModalImageIndex = (currentModalImageIndex - 1 + currentModalImages.length) % currentModalImages.length;
+            updateModalGalleryDisplay();
+        };
+
+        window.nextModalImage = function() {
+            if (currentModalImages.length <= 1) return;
+            currentModalImageIndex = (currentModalImageIndex + 1) % currentModalImages.length;
+            updateModalGalleryDisplay();
+        };
+
+        window.closeOrderModal = function() {
+            document.getElementById('orderModal').classList.remove('flex');
+            document.getElementById('orderModal').classList.add('hidden');
+        };
+
+        window.openCartModal = function() {
+            document.getElementById('cartModal').classList.remove('hidden');
+            document.getElementById('cartModal').classList.add('flex');
+            loadClientCartOrders();
+        };
+
+        window.closeCartModal = function() {
+            document.getElementById('cartModal').classList.remove('flex');
+            document.getElementById('cartModal').classList.add('hidden');
+        };
+
+        async function loadClientCartOrders() {
+            const container = document.getElementById('cartOrdersContainer');
+            if(!container) return;
+            const localOrders = JSON.parse(localStorage.getItem('fikrah_client_orders') || '[]');
+            if(localOrders.length === 0) {
+                container.innerHTML = '<div class="text-center text-gray-500 py-12 glass-card rounded-2xl">لا توجد طلبات مسجلة في سلتك حالياً.</div>';
+                return;
+            }
+            container.innerHTML = '';
+            for (let orderId of localOrders) {
+                try {
+                    const docSnap = await getDoc(doc(db, "orders", orderId));
+                    if(docSnap.exists()) {
+                        const o = docSnap.data();
+                        container.innerHTML += `
+                            <div class="glass-card border border-gold/30 rounded-2xl p-4 space-y-2">
+                                <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                                    <span class="text-xs text-gold font-bold">الخدمة: ${o.productName}</span>
+                                    <span class="px-2.5 py-1 rounded-full bg-gold/10 text-gold text-[10px] font-bold border border-gold/20">الحالة: ${o.status || 'جديد'}</span>
+                                </div>
+                                <div class="text-xs space-y-1 text-gray-300">
+                                    <p><strong>العميل:</strong> ${o.customerName}</p>
+                                    <p><strong>العنوان:</strong> ${o.address}</p>
+                                    ${o.area ? `<p><strong>المساحة:</strong> ${o.area} م²</p>` : ''}
+                                    <p><strong>طريقة التنفيذ:</strong> ${o.executionMethod || 'قيد التحديد'}</p>
+                                    <p><strong>المسؤول / الفني:</strong> ${o.technicianName || 'لم يُحدد بعد'}</p>
+                                    <p><strong>موعد الزيارة / التركيب:</strong> ${o.visitDate || 'لم يُحدد بعد'}</p>
+                                    <p><strong>تاريخ الطلب:</strong> ${new Date(o.date).toLocaleDateString('ar-SA')}</p>
+                                </div>
+                                <div class="flex justify-end pt-2">
+                                    <button onclick="cancelClientOrder('${orderId}')" class="bg-red-600/20 text-red-400 border border-red-500/30 text-xs px-3 py-1 rounded-lg hover:bg-red-600/40 transition">إلغاء الطلب</button>
+                                </div>
+                            </div>
+                        `;
+                    }
+                } catch(e) {
+                    console.error(e);
+                }
+            }
+        }
+
+        window.cancelClientOrder = async function(orderId) {
+            if(confirm('هل أنت متأكد من إلغاء هذا الطلب؟')) {
+                try {
+                    await deleteDoc(doc(db, "orders", orderId));
+                    let localOrders = JSON.parse(localStorage.getItem('fikrah_client_orders') || '[]');
+                    localOrders = localOrders.filter(id => id !== orderId);
+                    localStorage.setItem('fikrah_client_orders', JSON.stringify(localOrders));
+                    loadClientCartOrders();
+                    updateCartBadge();
+                    alert('تم إلغاء الطلب بنجاح.');
+                } catch(err) {
+                    console.error(err);
+                    alert('حدث خطأ أثناء إلغاء الطلب.');
+                }
+            }
+        };
+
+        function updateCartBadge() {
+            const badge = document.getElementById('cartBadgeCount');
+            if(!badge) return;
+            const localOrders = JSON.parse(localStorage.getItem('fikrah_client_orders') || '[]');
+            if(localOrders.length > 0) {
+                badge.innerText = localOrders.length;
+                badge.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+            }
+        }
+
+        window.submitOrder = async function(e) {
+            e.preventDefault();
+            const category = document.getElementById('modalProductCategory').value;
+            const areaVal = (category && category.trim() === 'إنارة ديكورية') ? 0 : Number(document.getElementById('customerArea').value || 1);
+
+            const orderData = {
+                productId: document.getElementById('modalProductId').value,
+                productName: document.getElementById('modalProductName').value,
+                customerName: document.getElementById('customerName').value,
+                phone: document.getElementById('customerPhone').value,
+                address: document.getElementById('customerAddress').value,
+                area: areaVal,
+                quantity: Number(document.getElementById('customerQuantity').value),
+                notes: document.getElementById('customerNotes').value,
+                status: 'جديد',
+                executionMethod: 'قيد التحديد',
+                technicianName: 'لم يُحدد بعد',
+                visitDate: 'لم يُحدد بعد',
+                date: new Date().toISOString()
+            };
+
+            try {
+                const docRef = await addDoc(collection(db, "orders"), orderData);
+                let localOrders = JSON.parse(localStorage.getItem('fikrah_client_orders') || '[]');
+                localOrders.push(docRef.id);
+                localStorage.setItem('fikrah_client_orders', JSON.stringify(localOrders));
+                
+                alert('نجاح العمليات: تم إرسال طلبك بنجاح وحفظه في سلة طلباتك!');
+                closeOrderModal();
+                document.getElementById('orderForm').reset();
+                updateCartBadge();
+            } catch (err) {
+                console.error(err);
+                alert('حدث خطأ أثناء إرسال الطلب.');
+            }
+        };
+
+        window.openCustomDesignModal = function() {
+            document.getElementById('customDesignModal').classList.remove('hidden');
+            document.getElementById('customDesignModal').classList.add('flex');
+        };
+
+        window.closeCustomDesignModal = function() {
+            document.getElementById('customDesignModal').classList.remove('flex');
+            document.getElementById('customDesignModal').classList.add('hidden');
+        };
+
+        window.submitCustomDesign = async function(e) {
+            e.preventDefault();
+            const customData = {
+                customerName: document.getElementById('customName').value,
+                phone: document.getElementById('customPhone').value,
+                spaceType: document.getElementById('customSpaceType').value,
+                description: document.getElementById('customDescription').value,
+                status: 'جديد',
+                date: new Date().toISOString()
+            };
+
+            try {
+                await addDoc(collection(db, "customDesigns"), customData);
+                alert('تم إرسال طلب التصميم الخاص بنجاح! سيتواصل معك مهندس الديكور في أقرب وقت.');
+                closeCustomDesignModal();
+                document.getElementById('customName').value = '';
+                document.getElementById('customPhone').value = '';
+                document.getElementById('customDescription').value = '';
+            } catch (err) {
+                console.error(err);
+                alert('حدث خطأ أثناء إرسال الطلب.');
+            }
+        };
+
+        window.handleProductSubmit = async function(e) {
+            e.preventDefault();
+            const editId = document.getElementById('editProductId').value;
+            const validImages = productImagesArray.filter(img => img !== "");
+            const primaryImage = validImages.length > 0 ? validImages[0] : "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=crop";
+
+            const product = {
+                name: document.getElementById('newProdName').value,
+                price: Number(document.getElementById('newProdPrice').value),
+                category: document.getElementById('newProdCategory').value,
+                images: validImages,
+                imageUrl: primaryImage,
+                description: document.getElementById('newProdDesc').value,
+                rating: 5.0
+            };
+            try {
+                if (editId) {
+                    await updateDoc(doc(db, "posts", editId), product);
+                    alert('تم تعديل المنتج بنجاح!');
+                } else {
+                    await addDoc(collection(db, "posts"), product);
+                    alert('تمت إضافة المنتج مع الصور بنجاح وحفظه في سحابية Firestore للأبد!');
+                }
+                resetProductForm();
+                loadAdminProducts();
+                updateDashboardStats();
+            } catch (err) {
+                console.error(err);
+                alert('حدث خطأ أثناء الحفظ (ربما حجم الصور كبير جداً، يرجى محاولة رفع صور أصغر حجماً).');
+            }
+        };
+
+        window.editAdminProduct = async function(id) {
+            const docSnap = await getDoc(doc(db, "posts", id));
+            if (docSnap.exists()) {
+                const p = docSnap.data();
+                document.getElementById('editProductId').value = id;
+                document.getElementById('newProdName').value = p.name;
+                document.getElementById('newProdPrice').value = p.price;
+                document.getElementById('newProdCategory').value = p.category;
+                document.getElementById('newProdDesc').value = p.description;
+
+                productImagesArray = new Array(10).fill("");
+                for(let i=1; i<=10; i++) {
+                    clearImageSlot(i);
+                }
+
+                if(p.images && Array.isArray(p.images)) {
+                    p.images.forEach((imgSrc, idx) => {
+                        if(idx < 10) {
+                            productImagesArray[idx] = imgSrc;
+                            const slot = idx + 1;
+                            const imgEl = document.getElementById(`imagePreviewImg${slot}`);
+                            const textEl = document.getElementById(`imagePlaceholderText${slot}`);
+                            if(imgEl && textEl) {
+                                imgEl.src = imgSrc;
+                                imgEl.classList.remove('hidden');
+                                textEl.classList.add('hidden');
+                            }
+                        }
+                    });
+                } else if(p.imageUrl) {
+                    productImagesArray[0] = p.imageUrl;
+                    const imgEl = document.getElementById(`imagePreviewImg1`);
+                    const textEl = document.getElementById(`imagePlaceholderText1`);
+                    if(imgEl && textEl) {
+                        imgEl.src = p.imageUrl;
+                        imgEl.classList.remove('hidden');
+                        textEl.classList.add('hidden');
+                    }
+                }
+
+                document.getElementById('productFormTitle').innerText = 'تعديل المنتج';
+                document.getElementById('productSubmitBtn').innerText = 'حفظ التعديلات';
+                document.getElementById('cancelEditBtn').classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+
+        window.resetProductForm = function() {
+            document.getElementById('editProductId').value = '';
+            document.getElementById('newProdName').value = '';
+            document.getElementById('newProdPrice').value = '';
+            document.getElementById('newProdCategory').value = '';
+            document.getElementById('newProdDesc').value = '';
+            
+            productImagesArray = new Array(10).fill("");
+            for(let i=1; i<=10; i++) {
+                clearImageSlot(i);
+            }
+
+            document.getElementById('productFormTitle').innerText = 'إضافة منتج أو خدمة جديدة';
+            document.getElementById('productSubmitBtn').innerText = 'إضافة ونشر فوراً';
+            document.getElementById('cancelEditBtn').classList.add('hidden');
+        };
+
+        async function loadAdminProducts() {
+            const list = document.getElementById('adminProductsGrid');
+            if (!list) return;
+            const snap = await getDocs(collection(db, "posts"));
+            list.innerHTML = '';
+            snap.forEach(d => {
+                const p = d.data();
+                const pImg = (p.images && p.images[0]) ? p.images[0] : (p.imageUrl || '');
+                list.innerHTML += `
+                    <div class="bg-luxblack border border-gold/20 p-4 rounded-2xl relative space-y-2">
+                        <img src="${pImg}" class="w-full h-32 object-cover rounded-xl mb-2">
+                        <h4 class="font-bold text-white text-sm">${p.name}</h4>
+                        <p class="text-gold font-black text-sm">${p.price} ريال</p>
+                        <div class="flex gap-2 pt-2">
+                            <button onclick="editAdminProduct('${d.id}')" class="flex-1 bg-gold/10 text-gold border border-gold/30 py-1.5 rounded-lg text-xs hover:bg-gold/20 transition">تعديل</button>
+                            <button onclick="deleteAdminProduct('${d.id}')" class="flex-1 bg-red-600/20 text-red-400 border border-red-500/30 py-1.5 rounded-lg text-xs hover:bg-red-600/40 transition">حذف</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        window.deleteAdminProduct = async function(id) {
+            if (confirm('هل أنت متأكد من حذف هذا المنتج نهائياً؟')) {
+                await deleteDoc(doc(db, "posts", id));
+                loadAdminProducts();
+                updateDashboardStats();
+            }
+        };
+
+        async function loadAdminOrders() {
+            const container = document.getElementById('adminOrdersMobileList');
+            if (!container) return;
+            const snap = await getDocs(collection(db, "orders"));
+            container.innerHTML = '';
+            if(snap.empty) {
+                container.innerHTML = '<div class="text-center text-gray-500 py-12 glass-card rounded-2xl">لا توجد طلبات معاينة وتركيب واردة حالياً.</div>';
+                return;
+            }
+            snap.forEach(d => {
+                const o = d.data();
+                container.innerHTML += `
+                    <div class="glass-card border border-gold/30 rounded-2xl p-5 space-y-4">
+                        <div class="flex justify-between items-start border-b border-gray-800 pb-3">
+                            <div>
+                                <span class="text-xs text-gold font-bold">العميل: ${o.customerName}</span>
+                                <h4 class="text-white font-black text-sm mt-0.5">الخدمة: ${o.productName} (الكمية: ${o.quantity})</h4>
+                            </div>
+                            <span class="text-[11px] text-gray-400">${new Date(o.date).toLocaleDateString('ar-SA')}</span>
+                        </div>
+                        <div class="text-xs space-y-1.5 text-gray-300">
+                            <p><strong>رقم الهاتف:</strong> <a href="tel:${o.phone}" class="text-gold underline">${o.phone}</a></p>
+                            <p><strong>العنوان:</strong> ${o.address}</p>
+                            ${o.area ? `<p><strong>المساحة:</strong> ${o.area} م²</p>` : ''}
+                            <p><strong>ملاحظات العميل:</strong> ${o.notes || 'لا توجد ملاحظات'}</p>
+                        </div>
+
+                        <div class="bg-luxblack border border-gold/20 p-4 rounded-xl space-y-3">
+                            <h5 class="text-xs font-bold text-gold uppercase tracking-wider">✦ معلومات التنفيذ والتوصيل الميداني</h5>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <label class="block text-[10px] text-gray-400 mb-1">طريقة التنفيذ</label>
+                                    <select id="execMethod_${d.id}" class="w-full bg-black border border-gold/20 text-white rounded-lg p-2 text-xs">
+                                        <option ${o.executionMethod==='فريق التركيب الخاص بالشركة'?'selected':''}>فريق التركيب الخاص بالشركة</option>
+                                        <option ${o.executionMethod==='معاينة ميدانية'?'selected':''}>معاينة ميدانية</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] text-gray-400 mb-1">اسم الفني / المسؤول</label>
+                                    <input type="text" id="techName_${d.id}" value="${o.technicianName || ''}" placeholder="اسم المسؤول..." class="w-full bg-black border border-gold/20 text-white rounded-lg p-2 text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] text-gray-400 mb-1">موعد الزيارة / التركيب</label>
+                                    <input type="text" id="visitDate_${d.id}" value="${o.visitDate || ''}" placeholder="مثال: غداً الساعة 4 عصراً" class="w-full bg-black border border-gold/20 text-white rounded-lg p-2 text-xs">
+                                </div>
+                            </div>
+                            <button onclick="saveExecutionDetails('${d.id}')" class="w-full bg-gold/20 hover:bg-gold/30 text-gold border border-gold/40 text-xs font-bold py-2 rounded-lg transition">حفظ معلومات التنفيذ الميداني</button>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2 border-t border-gray-800">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-gray-400">الحالة:</span>
+                                <select onchange="updateOrderStatus('${d.id}', this.value)" class="bg-luxblack border border-gold/30 text-gold rounded-lg p-1.5 text-xs font-bold">
+                                    <option ${o.status==='جديد'?'selected':''}>جديد</option>
+                                    <option ${o.status==='تم التواصل'?'selected':''}>تم التواصل</option>
+                                    <option ${o.status==='جاري التنفيذ'?'selected':''}>جاري التنفيذ</option>
+                                    <option ${o.status==='مكتمل'?'selected':''}>مكتمل</option>
+                                </select>
+                            </div>
+                            <button onclick="deleteAdminOrder('${d.id}')" class="bg-red-600/20 text-red-400 border border-red-500/30 text-xs px-3 py-1.5 rounded-lg hover:bg-red-600/40 transition">حذف الطلب</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        window.saveExecutionDetails = async function(id) {
+            const executionMethod = document.getElementById(`execMethod_${id}`).value;
+            const technicianName = document.getElementById(`techName_${id}`).value;
+            const visitDate = document.getElementById(`visitDate_${id}`).value;
+
+            try {
+                await updateDoc(doc(db, "orders", id), {
+                    executionMethod,
+                    technicianName,
+                    visitDate
+                });
+                alert('تم حفظ وتحديث معلومات التنفيذ الميداني بنجاح.');
+            } catch (err) {
+                console.error(err);
+                alert('حدث خطأ أثناء حفظ معلومات التنفيذ.');
+            }
+        };
+
+        window.updateOrderStatus = async function(id, status) {
+            await updateDoc(doc(db, "orders", id), { status });
+        };
+
+        window.deleteAdminOrder = async function(id) {
+            if (confirm('هل تريد حذف سجل هذا الطلب؟')) {
+                await deleteDoc(doc(db, "orders", id));
+                loadAdminOrders();
+                updateDashboardStats();
+            }
+        };
+
+        async function loadAdminCustomDesigns() {
+            const container = document.getElementById('adminCustomMobileList');
+            if (!container) return;
+            const snap = await getDocs(collection(db, "customDesigns"));
+            container.innerHTML = '';
+            if(snap.empty) {
+                container.innerHTML = '<div class="text-center text-gray-500 py-12 glass-card rounded-2xl">لا توجد طلبات تصاميم خاصة واردة حالياً.</div>';
+                return;
+            }
+            snap.forEach(d => {
+                const c = d.data();
+                container.innerHTML += `
+                    <div class="glass-card border border-gold/30 rounded-2xl p-5 space-y-3">
+                        <div class="flex justify-between items-start border-b border-gray-800 pb-3">
+                            <div>
+                                <span class="text-xs text-gold font-bold">العميل: ${c.customerName}</span>
+                                <h4 class="text-white font-black text-sm mt-0.5">نوع المساحة: ${c.spaceType}</h4>
+                            </div>
+                            <span class="text-[11px] text-gray-400">${new Date(c.date).toLocaleDateString('ar-SA')}</span>
+                        </div>
+                        <div class="text-xs space-y-1 text-gray-300">
+                            <p><strong>رقم الجوال:</strong> <a href="tel:${c.phone}" class="text-gold underline">${c.phone}</a></p>
+                            <p><strong>تفاصيل الفكرة المطلوبة:</strong> ${c.description}</p>
+                        </div>
+                        <div class="flex justify-end pt-2 border-t border-gray-800">
+                            <button onclick="deleteAdminCustomDesign('${d.id}')" class="bg-red-600/20 text-red-400 border border-red-500/30 text-xs px-3 py-1.5 rounded-lg hover:bg-red-600/40 transition">حذف الطلب</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        window.deleteAdminCustomDesign = async function(id) {
+            if (confirm('هل تريد حذف طلب التصميم الخاص؟')) {
+                await deleteDoc(doc(db, "customDesigns", id));
+                loadAdminCustomDesigns();
+                updateDashboardStats();
+            }
+        };
+
+        window.handleProjectSubmit = async function(e) {
+            e.preventDefault();
+            if (!projectBeforeBase64 || !projectAfterBase64) {
+                alert('الرجاء اختيار صورة (قبل) وصورة (بعد) من معرض الهاتف أولاً.');
+                return;
+            }
+
+            const project = {
+                beforeImage: projectBeforeBase64,
+                afterImage: projectAfterBase64,
+                description: document.getElementById('projDesc').value
+            };
+            try {
+                await addDoc(collection(db, "projects"), project);
+                alert('تمت إضافة المشروع بنجاح!');
+                projectBeforeBase64 = "";
+                projectAfterBase64 = "";
+                document.getElementById('projBeforeFile').value = "";
+                document.getElementById('projAfterFile').value = "";
+                document.getElementById('projBeforeImgPreview').classList.add('hidden');
+                document.getElementById('projBeforePlaceholder').classList.remove('hidden');
+                document.getElementById('projAfterImgPreview').classList.add('hidden');
+                document.getElementById('projAfterPlaceholder').classList.remove('hidden');
+                document.getElementById('projDesc').value = '';
+                loadAdminProjects();
+            } catch (err) {
+                console.error(err);
+                alert('حدث خطأ أثناء حفظ المشروع.');
+            }
+        };
+
+        async function loadAdminProjects() {
+            const list = document.getElementById('adminProjectsGrid');
+            if (!list) return;
+            const snap = await getDocs(collection(db, "projects"));
+            list.innerHTML = '';
+            snap.forEach(d => {
+                const prj = d.data();
+                list.innerHTML += `
+                    <div class="bg-luxblack border border-gold/20 p-4 rounded-2xl space-y-2">
+                        <div class="grid grid-cols-2 gap-2 h-32">
+                            <img src="${prj.beforeImage}" class="w-full h-full object-cover rounded-lg">
+                            <img src="${prj.afterImage}" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <p class="text-xs text-gray-300">${prj.description}</p>
+                        <button onclick="deleteAdminProject('${d.id}')" class="w-full bg-red-600/20 text-red-400 border border-red-500/30 py-1.5 rounded-lg text-xs hover:bg-red-600/40 transition">حذف المشروع</button>
+                    </div>
+                `;
+            });
+        }
+
+        window.deleteAdminProject = async function(id) {
+            if (confirm('هل أنت متأكد من حذف هذا المشروع نهائياً؟')) {
+                await deleteDoc(doc(db, "projects", id));
+                loadAdminProjects();
+            }
+        };
+
+        window.saveSellerSettings = async function(e) {
+            e.preventDefault();
+            const info = {
+                name: document.getElementById('sellerCompName').value,
+                phone: document.getElementById('sellerPhone').value,
+                whatsapp: document.getElementById('sellerWhatsapp').value,
+                email: document.getElementById('sellerEmail').value,
+                address: document.getElementById('sellerAddress').value
+            };
+            try {
+                await setDoc(doc(db, "companyInfo", "main"), info);
+                alert('تم تحديث إعدادات الشركة بنجاح!');
+                loadClientCompanyInfo();
+            } catch (err) {
+                console.error(err);
+            }
+        };
+
+        async function loadSellerSettingsForm() {
+            try {
+                const docSnap = await getDoc(doc(db, "companyInfo", "main"));
+                if (docSnap.exists()) {
+                    const info = docSnap.data();
+                    document.getElementById('sellerCompName').value = info.name || '';
+                    document.getElementById('sellerPhone').value = info.phone || '';
+                    document.getElementById('sellerWhatsapp').value = info.whatsapp || '';
+                    document.getElementById('sellerEmail').value = info.email || '';
+                    document.getElementById('sellerAddress').value = info.address || '';
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        async function updateDashboardStats() {
+            try {
+                const prodSnap = await getDocs(collection(db, "posts"));
+                const orderSnap = await getDocs(collection(db, "orders"));
+                const customSnap = await getDocs(collection(db, "customDesigns"));
+
+                document.getElementById('statTotalProducts').innerText = prodSnap.size;
+                document.getElementById('statTotalOrders').innerText = orderSnap.size;
+                document.getElementById('statTotalCustom').innerText = customSnap.size;
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        function loadAdminData() {
+            loadAdminProducts();
+            loadAdminOrders();
+            loadAdminCustomDesigns();
+            loadAdminProjects();
+            loadSellerSettingsForm();
+            updateDashboardStats();
+        }
+    </script>
+</body>
+</html>
